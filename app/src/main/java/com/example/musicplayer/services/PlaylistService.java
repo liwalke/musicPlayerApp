@@ -21,23 +21,23 @@ public class PlaylistService {
     public static void getAllPlaylists(Context context, ServiceDone cb){
         db.collection("Playlist")
                 .get()
-                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                            @Override
-                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                if (task.isSuccessful()) {
-                                    int i = 0;
-                                    for (QueryDocumentSnapshot document : task.getResult()) {
-                                        Playlist newPlaylist = new Playlist(document);
-                                        PlaylistRepository.getInstance().addPlaylist(i, newPlaylist);
-                                        i++;
-                                    }
-                                    if(cb != null){
-                                        cb.onServiceDone();
-                                    }
-                                } else {
-                                    Toast.makeText(context, "Something went wrong.", Toast.LENGTH_LONG).show();
-                                }
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            int i = 0;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Playlist newPlaylist = new Playlist(document);
+                                PlaylistRepository.getInstance().addPlaylist(i, newPlaylist);
+                                i++;
                             }
-                        });
+                            if(cb != null){
+                                cb.onServiceDone();
+                            }
+                        } else {
+                            Toast.makeText(context, "Something went wrong.", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
     }
 }

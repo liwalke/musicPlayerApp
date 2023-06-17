@@ -1,9 +1,9 @@
 package com.example.musicplayer.presenters;
 
-public interface HomePresenterContract {
+public interface ExplorePresenterContract {
     interface View{
-        public void showMessage(String message);
-        public void inflateRecyclerViews();
+        public void inflateRecyclerView();
+
     }
     interface Presenter{
         public void getAllPlaylists();

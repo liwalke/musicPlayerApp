@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000"
+        android:background="@color/SpotifyThird"
         tools:context=".Login">
 
         <TextView
@@ -53,8 +53,7 @@
             android:textColorHint="@color/SpotifySecondary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLoginSignUp"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/textViewLoginSignUp" />
 
         <EditText
             android:id="@+id/editTextTextPassword"

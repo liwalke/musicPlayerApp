@@ -18,12 +18,21 @@ public class PlaylistRepository {
         }
         return instance;
     }
+
     public int getSize(){
         return playlistList.size();
     }
+
     public List<Playlist> getPlaylists(){ return playlistList; }
 
-    public Playlist getPlaylist(int id){ return playlistList.get(id); }
+    public Playlist getPlaylistById(String id){
+        for (Playlist playlist : playlistList){
+            if (playlist.getId().equals(id)){
+                return playlist;
+            }
+        }
+        return null;
+    }
 
     public void addPlaylist(int index, Playlist newPlaylist){
         if (newPlaylist != null){

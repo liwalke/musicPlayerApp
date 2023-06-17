@@ -3,14 +3,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/SpotifyThird"
     tools:context=".ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000"
-        android:text="Profile"
-        android:textColor="#FFFFFF" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/SpotifyFifth"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Nome:"
+            android:textColor="@color/SpotifyFifth" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Nome do Usuário"
+            android:textColor="@color/SpotifyFifth" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Senha:"
+            android:textColor="@color/SpotifyFifth" />
+
+        <TextView
+            android:id="@+id/textView80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:text="123456"
+            android:textColor="@color/SpotifyFifth" />
+
+        <Button
+            android:id="@+id/Update"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/SpotifyPrimary"
+            android:drawableTint="#000000"
+            android:fallbackLineSpacing="false"
+            android:gravity="center"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/SpotifySecondary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </FrameLayout>

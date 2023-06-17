@@ -52,6 +52,7 @@ public class Login extends AppCompatActivity implements LoginPresenterContract.V
     @Override
     protected void onStart(){
         super.onStart();
+        //performLogout();
         if(presenter.getFirebaseUser() == null){
             showLoginLayout();
         } else {
